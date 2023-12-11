@@ -8,8 +8,8 @@ warnings.filterwarnings('ignore')
 # __all__ = ['Relation', 'GroupWrap']
 
 # Mat:
-# - Project - handle error
-# - Rename - handle error
+# - Project 
+# - Rename 
 # - Union
 # - join
 
@@ -19,8 +19,8 @@ warnings.filterwarnings('ignore')
 # - outerJoin
 # - antiJoin 
 # Kevin:
-# - Sort - handle error
-# - Extend - handle error
+# - Sort 
+# - Extend 
 # - Product
 # - Semi
 
@@ -28,6 +28,11 @@ warnings.filterwarnings('ignore')
 class Relation():
 
     def __init__(self, filename):
+        #If the filename parameter is a string, it is assumed to be a file name. 
+        # The code opens the CSV file, reads the column headers, 
+        # and then reads each row, populating the self.filename dictionary with data.
+        #If the filename parameter is a dictionary, it is assigned directly to self.filename.
+        
         if isinstance(filename, str):
             self.filename = {}
 

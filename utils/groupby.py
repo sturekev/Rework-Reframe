@@ -3,10 +3,10 @@ def GroupByCols (data:dict, Cols:list, operator=None) -> dict:
     traverse = traverseData(data)
     SortedData  = sortDict(getSortCols(traverse,colsIndex(data,Cols))) 
     groups = groupData(SortedData)
-    operated = operate(groups, operator=operator)
-    # print (operated)
+    
+    if operator:    operated = operate(groups, operator=operator)
     if operator: return generateGroup(Cols=Cols,groupData=groups,operateData=operated)
-    if operator: print(generateGroup(Cols=Cols,groupData=groups,operateData=operated)) 
+    # if operator: print(generateGroup(Cols=Cols,groupData=groups,operateData=operated)) 
     else:
         return generateRes(Cols, SortedData)
 
