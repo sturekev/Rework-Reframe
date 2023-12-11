@@ -5,7 +5,7 @@ from utils.select import *
 import csv
 import warnings
 warnings.filterwarnings('ignore')
-__all__ = ['Relation', 'GroupWrap']
+# __all__ = ['Relation', 'GroupWrap']
 
 # Mat:
 # - Project - handle error
@@ -250,3 +250,11 @@ class Relation():
 
     def getTabelHead(self):
         return [col for col in self.filename]
+    def getPresent(self):
+        data = traverseData(self.filename)
+        print ([head for head in self.getTabelHead()])
+        for i in data:
+            
+            print ([rec for rec in data[i]])
+            
+    
