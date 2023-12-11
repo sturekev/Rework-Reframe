@@ -16,7 +16,8 @@ warnings.filterwarnings('ignore')
 # Bill:
 # - Select
 # - Groupby
-
+# - outerJoin
+# - antiJoin 
 # Kevin:
 # - Sort - handle error
 # - Extend - handle error
